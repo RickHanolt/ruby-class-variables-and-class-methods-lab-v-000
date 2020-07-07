@@ -29,7 +29,17 @@ class Song
   end
 
   def self.genre_count
-    
+    genre_hash = {}
+    @@genres.uniq.each do |a_genre|
+      temp_genre_count = 0
+      @@genres.each do |g|
+        if a_genre == g
+          temp_genre_count += 1
+        end
+      end
+      genre_hash[a_genre] << temp_genre_count
+    end
+
   end
 
 end
