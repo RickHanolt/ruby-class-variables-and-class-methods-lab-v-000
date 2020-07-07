@@ -38,7 +38,7 @@ class Song
         end
       end
       binding.pry
-      genre_hash[a_genre] << temp_genre_count
+      genre_hash[a_genre] = temp_genre_count
     end
 
   end
