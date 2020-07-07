@@ -44,16 +44,16 @@ class Song
 
   def self.artist_count
     artist_hash = {}
-    @@artists.uniq.each do |a_genre|
-      temp_genre_count = 0
-      @@genres.each do |g|
-        if a_genre == g
-          temp_genre_count += 1
+    @@artists.uniq.each do |an_artist|
+      temp_artist_count = 0
+      @@artists.each do |a|
+        if an_artist == a
+          temp_artist_count += 1
         end
       end
-      genre_hash[a_genre] = temp_genre_count
+      artist_hash[an_artist] = temp_artist_count
     end
-    genre_hash
+    artist_hash
   end
 
 end
